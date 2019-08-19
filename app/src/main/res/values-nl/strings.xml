@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mijn Film Lijst</string>
+    <string name="movie_awards">Prijzen:</string>
+    <string name="movie_plot">Verhaal:</string>
+    <string name="placeholder_title">Titel mag niet leeg zijn</string>
+    <string name="search_btn">Zoeken</string>
+    <string name="step_one">Zoek een film op</string>
+    <string name="search_mov">Film zoeken</string>
+    <string name="toast_egg">"Je vind deze film echt leuk hey ? "</string>
+    <string name="toast_not_empty">Titel mag niet leeg zijn</string>
+    <string name="toast_processing">Laading...</string>
+    <string name="tvActors">Acteurs:</string>
+    <string name="tvCountry">Land:</string>
+    <string name="tvDirector">Regisseur:</string>
+    <string name="tvGenre">Categorie:</string>
+    <string name="tvLanguage">Talen:</string>
+    <string name="tvRelDate">Releasedatum:</string>
+    <string name="tvWriters">Schrijvers:</string>
+    <string name="tvYear">Jaar:</string>
+</resources>

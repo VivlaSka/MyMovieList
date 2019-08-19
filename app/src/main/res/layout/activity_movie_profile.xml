@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    tools:context=".MovieProfileActivity"
+    android:padding="16dp">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+           <ScrollView
+               android:paddingTop="20dp"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+               <LinearLayout
+                   android:id="@+id/fullscreen_content"
+                   android:orientation="vertical"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+                   <ImageView
+                       android:id="@+id/image_view_poster"
+                       android:scaleType = "centerCrop"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content" />
+                   <TextView
+                       android:id="@+id/text_view_title"
+                       android:text="Title"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+                   <TableLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+                       <TableRow>
+                           <TextView
+                               android:text="@string/tvYear"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content" />
+                           <TextView
+                               android:id="@+id/text_view_year"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content" />
+                       </TableRow>
+                       <TableRow>
+                           <TextView
+                               android:text="@string/tvGenre"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content" />
+                           <TextView
+                               android:id="@+id/text_view_genre"
+                               android:layout_width="wrap_content"
+                               android:layout_height="match_parent" />
+                       </TableRow>
+                       <TableRow>
+                           <TextView
+                               android:text="@string/tvRelDate"
+                               android:layout_width="wrap_content"
+                               android:layout_height="match_parent" />
+                           <TextView
+                               android:id="@+id/text_view__release_date"
+                               android:layout_width="wrap_content"
+                               android:layout_height="match_parent" />
+                       </TableRow>
+                       <TableRow>
+                           <TextView
+                               android:text="@string/tvLanguage"
+                               android:layout_width="wrap_content"
+                               android:layout_height="match_parent" />
+                           <TextView
+                               android:id="@+id/text_view_language"
+                               android:layout_width="wrap_content"
+                               android:layout_height="match_parent" />
+                       </TableRow>
+                       <TableRow>
+                           <TextView
+                               android:text="@string/tvCountry"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content" />
+                           <TextView
+                               android:id="@+id/text_view_country"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content" />
+                       </TableRow>
+                       <TableRow>
+                           <TextView
+                               android:text="@string/tvActors"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content" />
+                           <TextView
+                               android:id="@+id/text_view_actors"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content" />
+                       </TableRow>
+                       <TableRow>
+                           <TextView
+                               android:text="@string/tvWriters"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content" />
+                           <TextView
+                               android:id="@+id/text_view_writers"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content" />
+                       </TableRow>
+                       <TableRow>
+                           <TextView
+                               android:text="Director(s):"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content" />
+                           <TextView
+                               android:id="@+id/text_view_director"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content" />
+                       </TableRow>
+                   </TableLayout>
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textAlignment="center"
+                       android:text="@string/movie_plot"/>
+                   <TextView
+                       android:id="@id/text_view_description"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content" />
+                   <TextView
+                       android:text="@string/movie_awards"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content" />
+                   <TextView
+                       android:id="@+id/text_view_awards"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content" />
+               </LinearLayout>
+           </ScrollView>
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+            <Button
+                android:id="@+id/button_add_movie"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Add movie !" />
+            <Button
+                android:id="@+id/dummy_button"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fullscreen mode" />
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>
